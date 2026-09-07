@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xeCJK}
+\usepackage{tikz}
+\usepackage{titlesec}
+
+% 页面设置
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.8cm,
+    right=2.8cm
+}
+
+% 定义 section* 格式
+\titleformat{\section}
+  {\zihao{-3}\heiti\bfseries}
+  {}
+  {0em}
+  {}
+\titlespacing*{\section}{0pt}{0.5cm}{0.3cm}  % 左缩进、上间距、下间距
+
+
+% 取消页码（封面）
+\pagestyle{empty}
+
+% 定义等长下划线命令（固定宽度 6.5cm，左对齐）
+\newcommand{\infofill}[1]{{\zihao{4}\songti\underline{\makebox[6.5cm][c]{#1}}}}
+
+% 定义内容区块命令
+\newcommand{\reportsection}[2]{%
+    \noindent{\zihao{-3}\heiti\bfseries #1（#2分）}
+    \vspace{0.3cm}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    \vspace{6cm}
+}
+
+% 设置中文字体
+\setCJKmainfont{SimSun}  % 宋体，可根据系统改为 Noto Serif CJK SC 等
+
+\begin{document}
+% ==================== 封面页 ====================
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+    % 校徽占位（正方形示例图）
+    \includegraphics[width=5cm,height=5cm]{images/image-2026-09-07-14-57-04.png}
+    
+    \vspace{1.8cm}
+    
+    % 中山大学
+    {\zihao{1}\heiti\bfseries 中山大学}
+    
+    \vspace{0.9cm}
+    
+    % 微电子科学与技术学院
+    {\zihao{2}\heiti 微电子科学与技术学院}
+    
+    \vspace{0.9cm}
+    
+    % 课程名称
+    {\zihao{2}\heiti 《集成电路元器件特性表征实验》}
+    
+    \vspace{0.9cm}
+    
+    % 实验报告
+    {\zihao{1}\heiti\bfseries 实验报告}
+    
+    \vspace{3cm}
+    
+    % 信息表格
+    
+
+    % 信息表格（无任何框线，无横线，无竖线）
+    \begin{tabular}{@{}>{\zihao{4}\heiti}r @{\hspace{1.2em}} l@{}}
+        实验主题      & \infofill{}        \\[0.8cm]
+        姓\quad\quad 名 & \infofill{徐睿琳}   \\[0.8cm]
+        学\quad\quad 号 & \infofill{23342107} \\[0.8cm]
+        实验日期      & \infofill{\today}   \\[0.8cm]
+    \end{tabular}
+    
+    \vfill
+\end{titlepage}
+
+% ==================== 内容页 ====================
+\newpage
+\pagestyle{plain}
+\setcounter{page}{2}
+
+\section*{实验目的（5分）}
+
+
+\section*{实验原理（10分）}
+
+
+\section*{实验设备和步骤（5分）}
+
+
+\section*{实验数据分析（50分）}
+
+\section*{实验结论（20分）}
+
+
+\section*{实验启示和拓展（10分）}
+
+
+
+\end{document}
