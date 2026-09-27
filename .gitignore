@@ -10,9 +10,11 @@
 *.bbl
 *.blg
 *.nav
+*.pdf
 *.snm
 *.vrb
 *.xdv
 *.run.xml
 *-blx.bib
+.env
 .DS_Store
